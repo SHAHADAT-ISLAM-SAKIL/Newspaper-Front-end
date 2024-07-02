@@ -7,7 +7,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Topic Detail Page</title>
+        <title> <span>E-News</span></title>
 
         <!-- CSS FILES -->        
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,6 +21,12 @@
         <link href="css/bootstrap-icons.css" rel="stylesheet">
 
         <link href="css/templatemo-topic-listing.css" rel="stylesheet">
+        <link
+        href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css"
+        rel="stylesheet"
+        crossorigin="anonymous"
+      />
+        
 <!--
 
 TemplateMo 590 topic listing
@@ -52,7 +58,7 @@ https://templatemo.com/tm-590-topic-listing
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-lg-5 me-lg-auto">
                             <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_1">Home</a>
+                                <a class="nav-link click-scroll" href="index.html">Home</a>
                             </li>
             
                             <li class="nav-item">
@@ -90,17 +96,69 @@ https://templatemo.com/tm-590-topic-listing
             
 
 
-       
+       <!-- article display -->
 
             <div id="details-container">
                      <!-- JAVASCRIPT -->
             </div>
 
-       <!-- <div id="related-articles-list">
-        <li>
+       <div id="related-articles-list">
+       
+       </div>
 
-        </li>
-       </div> -->
+      <!-- reviews disply  -->
+       <style>
+        .section-padding{
+            height: 50%;
+            width: 90%;
+            justify-content: center;
+            margin: auto;
+           
+        }
+        .timeline-container{
+            box-shadow: 8px 8px 8px 16px gray;
+            border-radius: 15px;
+        }
+       .swiffy-slider{
+        width: 100%;
+       }
+      
+       .btn{
+        margin-top: 2px;
+       
+       }
+      
+    </style>
+    <section class="section-padding" id="section_3">
+       
+        <div class="col-lg-10 col-12 mx-auto">
+            <div class="timeline-container">
+                
+                <div class="d-flex  justify-content-center ">
+                    <div>
+                        <h5 class="mb-2"> Reviews:  </h5>
+                    </div>
+                   
+                </div> 
+                        <!-- all reviews -->
+                        <div class="swiffy-slider slider-item-show3 slider-item-reveal slider-nav-dark slider-nav-outside-expand">
+                            <ul class="slider-container py-4 d-flex" id="slider4">
+                                <!-- Articles will be injected here -->
+                            </ul>
+                            <button type="button" class="slider-nav" aria-label="Go to previous"></button>
+                            <button type="button" class="slider-nav slider-nav-next" aria-label="Go to next"></button>
+                        </div>
+                   
+             
+            </div>
+        </div>
+       
+    </section>
+    
+
+
+
+
 
 
 
@@ -137,7 +195,7 @@ https://templatemo.com/tm-590-topic-listing
                     <div class="col-lg-3 col-12 mb-4 pb-2">
                         <a class="navbar-brand mb-2" href="index.html">
                             <i class="bi-back"></i>
-                            <span>Topic</span>
+                            <span> <span>E-News</span></span>
                         </a>
                     </div>
 
@@ -203,6 +261,11 @@ https://templatemo.com/tm-590-topic-listing
         </footer>
 
         <!-- JAVASCRIPT FILES -->
+        <script
+        src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js"
+        crossorigin="anonymous"
+        defer
+      ></script>
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>
         <script src="js/jquery.sticky.js"></script>

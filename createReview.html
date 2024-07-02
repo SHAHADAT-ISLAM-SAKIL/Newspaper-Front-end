@@ -7,7 +7,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Login page</title>
+        <title>Create Article</title>
 
         <!-- CSS FILES -->        
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -98,7 +98,7 @@ https://templatemo.com/tm-590-topic-listing
                                
                             </nav>
 
-                            <h2 class="text-white">Registrion Form</h2>
+                            <h2 class="text-white">Create Review Form</h2>
                         </div>
 
                     </div>
@@ -109,186 +109,63 @@ https://templatemo.com/tm-590-topic-listing
             <section class="section-padding section-bg">
                 <div class="container">
                     <div class="row">
-
                         <div class="col-lg-12 col-12">
-                            <h3 class="mb-4 pb-2">Registrion:</h3>
+                            <h3 class="mb-4 pb-2">Provide Review Information</h3>
                         </div>
-<style>/* Basic Reset */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
-    body {
-        font-family: Arial, sans-serif;
-        background: #f0f0f0;
-       
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-    }
-    
-    .registration-container {
-        background: #024040;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 4px 4px 8px rgb(1, 66, 60);
-        animation: fadeIn 1s ease-in-out;
-      
-    }
-    
-    .text-white {
-        color: #fff;
-    }
-    
-    .form-floating {
-        position: relative;
-        margin-bottom: 1rem;
-    }
-    
-    .form-floating label {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        padding: 1rem;
-        pointer-events: none;
-        transition: all 0.3s ease;
-        color: #6c757d;
-    }
-    
-    .form-control {
-        width: 100%;
-        padding: 1rem;
-        border: 2px solid #ddd;
-        border-radius: 4px;
-        outline: none;
-        transition: all 0.3s ease;
-    }
-    
-    .form-control:focus {
-        border-color: #007bff;
-        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-    }
-    
-    .form-control:focus + label,
-    .form-control:not(:placeholder-shown) + label {
-        top: -1.25rem;
-        left: 0.75rem;
-        font-size: 0.75rem;
-        color: #007bff;
-    }
-    
-    .btn {
-        display: inline-block;
-        background: #007bff;
-        color: #fff;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        text-align: center;
-        transition: background 0.3s ease;
-    }
-    
-    .btn:hover {
-        background: #0056b3;
-    }
-    
-    a {
-        color: #007bff;
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
-    
-    a:hover {
-        color: #0056b3;
-    }
-    
-    .error-message {
-        color: red;
-        margin-top: 1rem;
-    }
-    
-    /* Animations */
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translateY(-20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-    </style>
-
-
-                        
-    <div class="registration-container">
-        <form action="#" method="post" class="custom-form contact-form" role="form" onsubmit="handleRegistration(event)">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-12">
-                    <div class="form-floating">
-                        <input type="text" name="Username" id="username" class="form-control" placeholder="Username" required>
-                        <label for="username">Username</label>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 col-md-6 col-12">
-                    <div class="form-floating">
-                        <input type="email" name="Email" id="email" class="form-control" placeholder="Email" required>
-                        <label for="email">Email</label>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 col-md-6 col-12">
-                    <div class="form-floating">
-                        <input type="text" name="first_name" id="first_name" class="form-control" placeholder="First Name" required>
-                        <label for="first_name">First Name</label>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 col-md-6 col-12">
-                    <div class="form-floating">
-                        <input type="text" name="last_name" id="last_name" class="form-control" placeholder="Last Name" required>
-                        <label for="last_name">Last Name</label>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 col-md-6 col-12">
-                    <div class="form-floating">
-                        <input type="password" name="password" id="password" class="form-control" placeholder="Password" required>
-                        <label for="password">Password</label>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 col-md-6 col-12">
-                    <div class="form-floating">
-                        <input type="password" name="confirm_password" id="confirm_password" class="form-control" placeholder="Confirm Password" required>
-                        <label for="confirm_password">Confirm Password</label>
-                    </div>
-                </div>
-
-                <div class="col-lg-12 col-12">
-                    <p class="mb-0"><a href="login.html">Go to Login page</a></p>
-                </div>
-
-                <div class="col-lg-4 col-12 ms-auto">
-                    <button type="submit" class="form-control">Submit</button>
-                </div>
-            </div>
-            <div id="error" class="error-message"></div>
-            <div id="success" class="success-message"></div> <!-- Success message container -->
-        </form>
-    </div>
-
-                       
-
+                        <div class="registration-container">
+                            <form id="articleForm" class="custom-form contact-form" role="form" enctype="multipart/form-data">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="form-floating">
+                                            <select id="rating" class="form-select" aria-label="Default select example">
+                                                <option selected>Rating:</option>
+                                                <option value="⭐">⭐</option>
+                                                <option value="⭐⭐">⭐⭐</option>
+                                                <option value="⭐⭐⭐">⭐⭐⭐</option>
+                                                <option value="⭐⭐⭐⭐">⭐⭐⭐⭐</option>
+                                                <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="form-floating">
+                                            <textarea id="body" class="form-control" placeholder="Body" required style="height: 100px;"></textarea>
+                                            <label for="body">Body</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <select id="related-articles-list" class="form-select" aria-label="Article" required>
+                                            <option selected disabled>Select an Article</option>
+                                            <!-- Options will be dynamically added here -->
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <select id="author" class="form-select" aria-label="Author" required>
+                                            <option selected disabled>Author</option>
+                                            <!-- Options will be dynamically added here -->
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-4 col-12 ms-auto">
+                                        <button type="submit" class="btn form-control">Post</button>
+                                    </div>
+                                </div>
+                                <div id="error" class="error-message"></div>
+                                <div id="success" class="success-message"></div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </section>
+            
+        
+            
+          
+            
+
+        
+           
+            
+            
         </main>
 
         <footer class="site-footer section-padding">
@@ -298,7 +175,7 @@ https://templatemo.com/tm-590-topic-listing
                     <div class="col-lg-3 col-12 mb-4 pb-2">
                         <a class="navbar-brand mb-2" href="index.html">
                             <i class="bi-back"></i>
-                            <span> E-News</span>
+                            <span>E-News</span>
                         </a>
                     </div>
 
@@ -369,6 +246,9 @@ https://templatemo.com/tm-590-topic-listing
         <script src="js/jquery.sticky.js"></script>
         <script src="js/custom.js"></script>
         <script src="/auth.js"></script>
+        <script src="/createReview.js"></script>
+  
+       
 
     </body>
 </html>

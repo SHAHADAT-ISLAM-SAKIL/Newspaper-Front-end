@@ -66,7 +66,7 @@ const CreateArticle = (event) => {
         method: 'POST',
         body: formData,
         headers: {
-            'Authorization': `Bearer ${localStorage.getItem('token')}`, // Corrected syntax and added Bearer
+            'Authorization': `token ${localStorage.getItem('token')}`, // Corrected syntax and added Bearer
         },
     })
     .then(response => {

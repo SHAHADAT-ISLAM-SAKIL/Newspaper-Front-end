@@ -124,7 +124,7 @@ https://templatemo.com/tm-590-topic-listing
                         cursor: pointer;
                         
                     }
-                    
+                
                   
                     
                     
@@ -152,7 +152,7 @@ https://templatemo.com/tm-590-topic-listing
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-lg-5 me-lg-auto">
                             <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_1">Home</a>
+                                <a class="nav-link click-scroll" href="index.html">Home</a>
                             </li>
             
                             <li class="nav-item">
@@ -198,18 +198,7 @@ https://templatemo.com/tm-590-topic-listing
                             <h1 class="text-white text-center">Discover. Learn. Enjoy</h1>
 
                             <h6 class="text-center">platform for creatives around the world</h6>
-
-                            <form method="get" class="custom-form mt-4 pt-2 mb-lg-0 mb-5" role="search">
-                                <div class="input-group input-group-lg">
-                                    <span class="input-group-text bi-search" id="basic-addon1">
-                                        
-                                    </span>
-
-                                    <input name="keyword" type="search" class="form-control" id="keyword" placeholder="Design, Code, Marketing, Finance ..." aria-label="Search">
-
-                                    <button type="submit" class="form-control">Search</button>
-                                </div>
-                            </form>
+                                       
                         </div>
 
                     </div>
@@ -242,12 +231,51 @@ https://templatemo.com/tm-590-topic-listing
             </section>
 
 
-        <section class="explore-section section-padding" id="section_2">
+<style>
+    .explore-section{
+        height: 150px;
+        width: 90%;
+        justify-content: center;
+        margin: auto;
+    }
+    .card-img-top{
+        width: 300px;
+        height: 300px;
+    }
+    .search-form{
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        box-shadow: 4px 4px 8px rgb(219, 10, 184);
+        background-color: antiquewhite;
+        border: #FFD700;
+        border-radius: 10px;
+    }
+    .form-control{
+       
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        box-shadow: 4px 4px 8px rgb(57, 54, 57);
+        background-color: antiquewhite;
+        border: #FFD700;
+        border-radius: 20px;
+    }
+    
+  
+</style>
+<section class="explore-section section-padding" id="section_2">
                 <div class="container">
                     <div class="row">
 
                         <div class="col-12 text-center">
                             <h2 class="mb-4">Browse Topics</h1>
+                                <form class="d-flex search-form" role="search" onsubmit="handleSearch(); return false;">
+                                    <input class="form-control me-2 search-input" type="search" placeholder="  Search ..." aria-label="Search" id="search">
+                                    <button class="btn btn-outline-success search-btn" type="submit">Search</button>
+                                </form>
+                                
                         </div>
 
                     </div>
@@ -263,41 +291,35 @@ https://templatemo.com/tm-590-topic-listing
                 </div>
 
 
-             
-                <div class="container-fluid text-center">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="tab-content" id="myTabContent">
-                                <div class="tab-pane fade show active" id="design-tab-pane" role="tabpanel" aria-labelledby="design-tab" tabindex="0">
-                                    <div class="row">
-                                        <!-- Display article start -->
-                                        <div class="col-12 mb-4">
-                                            <div id="article-container" class="d-flex justify-content-center">
-                                                <div id="article" class="row w-100">
-                                                    <!-- JAVASCRIPT will inject articles here -->
-                                                </div>
-                                                <div id="nodata" class="nodata" style="display: none;">
-                                                    <img class="centered-image" src="./images/nodata.jpg" alt="No data available" />
-                                                </div>
-                                                <div id="spinner" class="loading text-center" style="display: none;">
-                                                    <h4>Loading...</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Display article end -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+ 
+
+
+               <!-- Spinner for loading indication -->
+<div id="spinner" style="display: none;">Loading...</div>
+
+<!-- Message when no data is available -->
+<div id="nodata" style="display: none;"> <h2 class="mb-4">No data available</h1></div>
+
+<!-- The container where articles will be displayed -->
+<div class="swiffy-slider slider-item-show3 slider-item-reveal slider-nav-dark slider-nav-outside-expand">
+    <ul class="slider-container py-4" id="slider2">
+        <!-- Articles will be injected here -->
+    </ul>
+    <button type="button" class="slider-nav" aria-label="Go to previous"></button>
+    <button type="button" class="slider-nav slider-nav-next" aria-label="Go to next"></button>
+</div>
+
                 
                 
-            </section>
+                
+    </section>
 
 <style>
     .section-padding{
-        height:800px;
+        height: 50%;
+        width: 90%;
+        justify-content: center;
+        margin: auto;
        
     }
     .timeline-container{
@@ -308,26 +330,38 @@ https://templatemo.com/tm-590-topic-listing
     width: 100%;
    }
   
+   .btn{
+    margin-top: 2px;
+   
+   }
+  
 </style>
 <section class="section-padding" id="section_3">
+   
     <div class="col-lg-10 col-12 mx-auto">
         <div class="timeline-container">
-            <ul class="vertical-scrollable-timeline" id="vertical-scrollable-timeline">
-                <li>
+            
+            <div class="d-flex  justify-content-center ">
+                <div>
+                    <h5 class="mb-2">Provide Review:  </h5>
+                </div>
+                <a href="createReview.html">
+                <button type="button" class="btn btn-outline-success" >create</button>
+            </a>
+            </div> 
                     <!-- all reviews -->
-                    <div class="review-container p-5 mt-5 w-75 m-auto">
-                        <div class="reviews">
-                            <div class="swiffy-slider">
-                                <ul id="review-container" class="slider-container py-4"> </ul>
-                                <button type="button" id="prev-btn" class="slider-nav" aria-label="Go left">Previous</button>
-                                <button type="button" id="next-btn" class="slider-nav slider-nav-next" aria-label="Go right">Next</button>
-                            </div>
-                        </div>
+                    <div class="swiffy-slider slider-item-show3 slider-item-reveal slider-nav-dark slider-nav-outside-expand">
+                        <ul class="slider-container py-4" id="slider3">
+                            <!-- Articles will be injected here -->
+                        </ul>
+                        <button type="button" class="slider-nav" aria-label="Go to previous"></button>
+                        <button type="button" class="slider-nav slider-nav-next" aria-label="Go to next"></button>
                     </div>
-                </li>
-            </ul>
+               
+         
         </div>
     </div>
+   
 </section>
 
             
@@ -469,7 +503,7 @@ https://templatemo.com/tm-590-topic-listing
                     <div class="col-lg-3 col-12 mb-4 pb-2">
                         <a class="navbar-brand mb-2" href="index.html">
                             <i class="bi-back"></i>
-                            <span>Topic</span>
+                            <span>E-News</span>
                         </a>
                     </div>
 

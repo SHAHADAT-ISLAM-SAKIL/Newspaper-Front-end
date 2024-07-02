@@ -5,7 +5,8 @@ const getparams = () => {
     .then((data) => {
         const article = data.results[0];
         loadDetails(article);
-        loadRelatedArticles(article.category);
+        loadReviewdetails(article.id);
+       
     });
 };
 
@@ -85,5 +86,81 @@ const loadRelatedArticles = (category) => {
         });
     });
 };
+
+
+
+
+
+
+
+// review section of details
+
+
+const  loadReviewdetails = (article_id) => {
+    fetch(`https://newspaper-2jgz.onrender.com/news/ratings/?article_id=${article_id}`)
+        .then((res) => res.json())
+        .then((data) => {
+            console.log('load data',data);
+
+           
+            // Log the data to check the response
+            loadArticleReview(data.results); // Display the first review
+           
+        })
+        .catch((error) => console.error('Error fetching reviews:', error)); // Log any errors
+};
+
+
+
+const loadArticleReview = (reviews) => {
+    console.log("amar loadarticle:",reviews);
+    const parent = document.getElementById("slider4");
+    parent.innerHTML = ''; // Clear existing reviews if any
+
+    reviews.forEach((review) => {
+        const li = document.createElement("li");
+        li.innerHTML = `
+            <div class="card shadow h-100">
+                <div class="card-body d-flex flex-column flex-md-row">
+                    <div class="flex-grow-1">
+                        <strong>${review.rating}</strong>
+                        <p class="card-text"><h6>Title:</h6>${review.body.slice(0, 100)}</p>
+                        <span class="badge bg-design rounded-pill ms-auto"> Reviewer ID: ${review.user}</span>
+                    </div>
+                    <div class="px-md-2">  <span class="badge bg-design rounded-pill ms-auto"> Author: ${review.article}</span></div>
+                   
+                </div>
+            </div>
+        `;
+        parent.appendChild(li);
+    });
+};
+
+
+
+
+loadRelatedArticles('');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 getparams();
